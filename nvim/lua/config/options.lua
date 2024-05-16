@@ -4,10 +4,15 @@
 
 local opt = vim.opt
 
-opt.clipboard = "unnamed"
+opt.clipboard = "unnamedplus"
 
 -- folding options with treesitter
 opt.foldenable = true
 opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- colorscheme
+opt.termguicolors = true
+opt.background = "dark"
+opt.guifont = "JetBrainsMono Nerd Font:h10"

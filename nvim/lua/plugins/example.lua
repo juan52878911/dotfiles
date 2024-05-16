@@ -59,6 +59,14 @@ return {
         function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
         desc = "Find Plugin File",
       },
+      {
+        "<leader>fr",
+        function()
+          require("telescope.builtin").load_extension("rest")
+          require("telescope.builtin").extensions.rest.select_env()
+        end,
+        desc = "Find http request",
+      },
     },
     -- change some options
     opts = {
@@ -154,6 +162,11 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "lua",
+        "xml",
+        "http",
+        "json",
+        "graphql",
       },
     },
   },
