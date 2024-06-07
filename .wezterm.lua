@@ -52,15 +52,15 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- activate ONLY if windows --
 
--- config.default_domain = 'WSL:Ubuntu'
--- config.front_end = "WebGpu"
--- config.max_fps = 120
--- for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
---	if gpu.backend == "Vulkan" then
--- 		config.webgpu_preferred_adapter = gpu
--- 		break
--- 	end
--- end
+config.default_domain = 'WSL:Ubuntu'
+config.front_end = "WebGpu"
+config.max_fps = 120
+for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
+if gpu.backend == "Vulkan" then
+		config.webgpu_preferred_adapter = gpu
+		break
+	end
+end
 
 
 -- and finally, return the configuration to wezterm
